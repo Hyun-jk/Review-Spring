@@ -3,6 +3,7 @@ package hello.hellospring.service;
 import hello.hellospring.domain.Member;
 import hello.hellospring.repository.MemoryMemberRepository;
 import org.junit.jupiter.api.*;
+import org.springframework.test.annotation.Commit;
 
 import javax.xml.bind.JAXBElement;
 
@@ -26,10 +27,11 @@ class MemberServiceTest {
     }
 
     @Test
+    @Commit
     void 회원가입() {
         //Given
         Member member = new Member();
-        member.setName("spring");
+        member.setName("test222");
 
         //When
         Long saveId = memberService.join(member);
